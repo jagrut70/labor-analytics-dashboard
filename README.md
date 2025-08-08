@@ -1,5 +1,12 @@
 # 🚀 Labor Analytics Dashboard with AI/ML Enhancement
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue.svg)](https://github.com/jagrut70/labor-analytics-dashboard)
+[![AI/ML](https://img.shields.io/badge/AI%2FML-Enhanced-orange.svg)](https://github.com/jagrut70/labor-analytics-dashboard)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Integration-purple.svg)](https://powerbi.microsoft.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue.svg)](https://www.postgresql.org/)
+
 ## 🤖 **AI-Powered Intelligent Analytics Platform**
 
 A comprehensive **Labor Power BI Dashboard** enhanced with cutting-edge **AI, ML, and modern technologies** for intelligent data validation, predictive analytics, and automated insights generation.
@@ -170,6 +177,10 @@ Labor PowerBI Dashboard/
 
 ### **1. Prerequisites**
 ```bash
+# Clone the repository
+git clone https://github.com/jagrut70/labor-analytics-dashboard.git
+cd labor-analytics-dashboard
+
 # Install Python dependencies
 pip install -r python/requirements_ai.txt
 
@@ -281,9 +292,21 @@ python python/ai_engine/predictive_analytics.py
 
 ---
 
+## 🤝 **Contributing**
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
 ## 📄 **License**
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -303,6 +326,29 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
+## 🌟 **Star History**
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jagrut70/labor-analytics-dashboard&type=Date)](https://star-history.com/#jagrut70/labor-analytics-dashboard&Date)
+
+---
+
 **🚀 Transform your labor analytics with the power of AI/ML!**
 
 *Built with cutting-edge technology for intelligent, automated, and predictive labor analytics.*
+
+---
+
+<div align="center">
+  <a href="https://github.com/jagrut70/labor-analytics-dashboard">
+    <img src="https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github" alt="GitHub Repository">
+  </a>
+  <a href="https://powerbi.microsoft.com/">
+    <img src="https://img.shields.io/badge/Power%20BI-Integration-purple?style=for-the-badge&logo=power-bi" alt="Power BI">
+  </a>
+  <a href="https://www.postgresql.org/">
+    <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-AI%2FML-orange?style=for-the-badge&logo=python" alt="Python">
+  </a>
+</div>
