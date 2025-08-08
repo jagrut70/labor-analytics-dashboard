@@ -1,0 +1,94 @@
+{
+  "validation_rules": {
+    "employee_data": {
+      "required_fields": ["employee_id", "first_name", "last_name", "department", "hire_date"],
+      "data_types": {
+        "employee_id": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "department": "string",
+        "hire_date": "date",
+        "salary": "numeric",
+        "hours_worked": "numeric"
+      },
+      "ranges": {
+        "salary": {"min": 20000, "max": 200000},
+        "hours_worked": {"min": 0, "max": 168},
+        "overtime_hours": {"min": 0, "max": 40}
+      },
+      "business_rules": [
+        "salary_must_be_positive",
+        "hours_worked_cannot_exceed_168_per_week",
+        "overtime_hours_cannot_exceed_40_per_week",
+        "employee_id_must_be_unique"
+      ]
+    },
+    "time_tracking": {
+      "required_fields": ["employee_id", "date", "hours_worked", "project_code"],
+      "data_types": {
+        "employee_id": "string",
+        "date": "date",
+        "hours_worked": "numeric",
+        "project_code": "string",
+        "task_description": "string"
+      },
+      "ranges": {
+        "hours_worked": {"min": 0, "max": 24},
+        "date": {"min": "2020-01-01", "max": "2030-12-31"}
+      },
+      "business_rules": [
+        "hours_worked_cannot_exceed_24_per_day",
+        "date_cannot_be_future",
+        "project_code_must_exist_in_projects_table"
+      ]
+    },
+    "payroll": {
+      "required_fields": ["employee_id", "pay_period_start", "pay_period_end", "gross_pay"],
+      "data_types": {
+        "employee_id": "string",
+        "pay_period_start": "date",
+        "pay_period_end": "date",
+        "gross_pay": "numeric",
+        "net_pay": "numeric",
+        "taxes": "numeric"
+      },
+      "ranges": {
+        "gross_pay": {"min": 0, "max": 50000},
+        "net_pay": {"min": 0, "max": 50000},
+        "taxes": {"min": 0, "max": 15000}
+      },
+      "business_rules": [
+        "net_pay_cannot_exceed_gross_pay",
+        "taxes_cannot_exceed_gross_pay",
+        "pay_period_end_must_be_after_start",
+        "pay_period_cannot_overlap"
+      ]
+    }
+  },
+  "cross_validation_rules": [
+    {
+      "name": "salary_hours_consistency",
+      "description": "Salary should be consistent with hours worked and hourly rate",
+      "formula": "abs(salary - (hours_worked * hourly_rate)) <= tolerance",
+      "tolerance": 100
+    },
+    {
+      "name": "overtime_calculation",
+      "description": "Overtime hours should be calculated correctly",
+      "formula": "overtime_hours = max(0, total_hours - 40)",
+      "tolerance": 0.1
+    }
+  ],
+  "data_quality_thresholds": {
+    "completeness": 0.95,
+    "accuracy": 0.98,
+    "consistency": 0.97,
+    "timeliness": 0.99
+  },
+  "notification_settings": {
+    "critical_errors": true,
+    "warning_threshold": 0.05,
+    "daily_summary": true,
+    "weekly_report": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "labor_analytics",
+    "username": "labor_user",
+    "password": "secure_password_123",
+    "sslmode": "prefer",
+    "connect_timeout": 10
+  },
+  "pgadmin": {
+    "host": "localhost",
+    "port": 5050,
+    "email": "admin@laboranalytics.com",
+    "password": "admin_password_123",
+    "master_password": "master_password_123"
+  },
+  "powerbi": {
+    "refresh_interval": 300,
+    "max_connections": 10,
+    "timeout": 30
+  },
+  "validation": {
+    "batch_size": 1000,
+    "max_retries": 3,
+    "retry_delay": 5,
+    "log_level": "INFO"
+  },
+  "email_notifications": {
+    "enabled": true,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "sender_email": "alerts@laboranalytics.com",
+    "recipients": ["admin@company.com", "analytics@company.com"]
+  }
+}
